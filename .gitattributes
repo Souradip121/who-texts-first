@@ -1,0 +1,5 @@
+# keep the sample exports byte-for-byte (the iPhone one uses CRLF and a BOM, like the real thing)
+samples/*.txt -text
+*.png binary
+*.webp binary
+*.woff2 binary

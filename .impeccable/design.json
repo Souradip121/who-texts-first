@@ -1,0 +1,975 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-11T19:55:21+00:00",
+  "title": "Design System: Who Texts First",
+  "extensions": {
+    "colorMeta": {
+      "field": {
+        "role": "neutral",
+        "displayName": "Lavender Field",
+        "canonical": "oklch(91.0% 0.044 295.5)",
+        "tonalRamp": [
+          "#0D071B",
+          "#272038",
+          "#443D57",
+          "#635C78",
+          "#847D9A",
+          "#A7A0BE",
+          "#CBC4E3",
+          "#EFEBFF"
+        ]
+      },
+      "screen-top": {
+        "role": "neutral",
+        "displayName": "Blush Screen (top)",
+        "canonical": "oklch(96.5% 0.021 323.4)",
+        "tonalRamp": [
+          "#100810",
+          "#2A222B",
+          "#483E49",
+          "#675D68",
+          "#897E8A",
+          "#ACA1AD",
+          "#D0C5D1",
+          "#F6EAF7"
+        ]
+      },
+      "screen-bottom": {
+        "role": "neutral",
+        "displayName": "Blush Screen (bottom)",
+        "canonical": "oklch(96.2% 0.022 319.0)",
+        "tonalRamp": [
+          "#0F0811",
+          "#2A222C",
+          "#473E4A",
+          "#675D69",
+          "#887E8B",
+          "#ABA1AE",
+          "#CFC5D2",
+          "#F5EAF8"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Plum Ink",
+        "canonical": "oklch(34.8% 0.084 296.9)",
+        "tonalRamp": [
+          "#100028",
+          "#2A1948",
+          "#473769",
+          "#66578B",
+          "#8778AF",
+          "#AA9AD4",
+          "#CEBEFA",
+          "#F0EBFE"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink 2",
+        "canonical": "oklch(45.2% 0.088 298.2)",
+        "tonalRamp": [
+          "#110027",
+          "#2B1849",
+          "#48366A",
+          "#68568D",
+          "#8977B0",
+          "#AC99D5",
+          "#D0BDFC",
+          "#F0EBFF"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Ink 3",
+        "canonical": "oklch(50.6% 0.083 298.4)",
+        "tonalRamp": [
+          "#110027",
+          "#2B1947",
+          "#483768",
+          "#67568A",
+          "#8977AE",
+          "#AB9AD3",
+          "#D0BEF9",
+          "#F0EBFF"
+        ]
+      },
+      "heading-violet": {
+        "role": "primary",
+        "displayName": "Heading Violet",
+        "canonical": "oklch(51.2% 0.199 293.3)",
+        "tonalRamp": [
+          "#0F002A",
+          "#2D0063",
+          "#4D0E9E",
+          "#6B3DC5",
+          "#8B62EC",
+          "#AA90FC",
+          "#CBBFFE",
+          "#EFECFF"
+        ]
+      },
+      "pill-ink": {
+        "role": "neutral",
+        "displayName": "Pill Ink",
+        "canonical": "oklch(49.6% 0.194 292.5)",
+        "tonalRamp": [
+          "#0E0129",
+          "#2C0362",
+          "#4C139D",
+          "#693FC3",
+          "#8964EA",
+          "#A990FF",
+          "#CABFFD",
+          "#EEECFE"
+        ]
+      },
+      "violet": {
+        "role": "secondary",
+        "displayName": "Violet (focus, numerals)",
+        "canonical": "oklch(57.1% 0.187 297.1)",
+        "tonalRamp": [
+          "#100127",
+          "#2F045D",
+          "#511496",
+          "#703EBC",
+          "#9162E2",
+          "#B18DFC",
+          "#CFBDFE",
+          "#F0EBFF"
+        ]
+      },
+      "violet-deep": {
+        "role": "secondary",
+        "displayName": "Violet Deep (links)",
+        "canonical": "oklch(53.5% 0.180 293.9)",
+        "tonalRamp": [
+          "#0F0128",
+          "#2D0560",
+          "#4C1C95",
+          "#6A43BB",
+          "#8B66E1",
+          "#AB90FB",
+          "#CCBFFD",
+          "#EFECFF"
+        ]
+      },
+      "orchid": {
+        "role": "secondary",
+        "displayName": "Orchid (hover, step numbers)",
+        "canonical": "oklch(55.6% 0.194 314.1)",
+        "tonalRamp": [
+          "#160020",
+          "#3A014F",
+          "#640483",
+          "#8830AB",
+          "#AB56D1",
+          "#D07AF8",
+          "#E5B2FE",
+          "#F7E8FF"
+        ]
+      },
+      "icon-lilac": {
+        "role": "neutral",
+        "displayName": "Icon Lilac",
+        "canonical": "oklch(67.1% 0.154 294.0)",
+        "tonalRamp": [
+          "#0F0128",
+          "#2D0460",
+          "#4A278A",
+          "#684AAE",
+          "#896CD4",
+          "#AB90FB",
+          "#CCBFFD",
+          "#EFECFF"
+        ]
+      },
+      "pill": {
+        "role": "neutral",
+        "displayName": "Pill Lilac",
+        "canonical": "oklch(92.7% 0.036 299.7)",
+        "tonalRamp": [
+          "#0E0718",
+          "#282134",
+          "#453E53",
+          "#645D73",
+          "#857E95",
+          "#A8A0B9",
+          "#CCC4DE",
+          "#F1EBFF"
+        ]
+      },
+      "pink-panel": {
+        "role": "neutral",
+        "displayName": "Pink Panel",
+        "canonical": "oklch(94.3% 0.034 336.2)",
+        "tonalRamp": [
+          "#140611",
+          "#301F2B",
+          "#4E3B49",
+          "#6E5A69",
+          "#907B8A",
+          "#B49DAD",
+          "#D8C1D2",
+          "#FEE6F7"
+        ]
+      },
+      "pink-panel-2": {
+        "role": "neutral",
+        "displayName": "Pink Panel (low)",
+        "canonical": "oklch(91.9% 0.047 336.9)",
+        "tonalRamp": [
+          "#170312",
+          "#331C2D",
+          "#52384B",
+          "#73576B",
+          "#95788D",
+          "#B99AB0",
+          "#DEBED4",
+          "#FFE6F7"
+        ]
+      },
+      "pink-line": {
+        "role": "neutral",
+        "displayName": "Pink Line",
+        "canonical": "oklch(87.8% 0.069 336.3)",
+        "tonalRamp": [
+          "#1A0015",
+          "#391631",
+          "#593350",
+          "#7A5270",
+          "#9D7392",
+          "#C295B5",
+          "#E7B9DA",
+          "#FFE6F8"
+        ]
+      },
+      "lilac-panel": {
+        "role": "neutral",
+        "displayName": "Lilac Panel",
+        "canonical": "oklch(95.8% 0.022 300.2)",
+        "tonalRamp": [
+          "#0D0913",
+          "#27232E",
+          "#44404C",
+          "#635F6C",
+          "#84808E",
+          "#A7A2B1",
+          "#CBC6D6",
+          "#F0EBFB"
+        ]
+      },
+      "lilac-panel-2": {
+        "role": "neutral",
+        "displayName": "Lilac Panel (low)",
+        "canonical": "oklch(93.5% 0.033 299.1)",
+        "tonalRamp": [
+          "#0D0817",
+          "#272133",
+          "#443E51",
+          "#645D72",
+          "#857E94",
+          "#A8A1B7",
+          "#CCC5DC",
+          "#F1EBFF"
+        ]
+      },
+      "lilac-line": {
+        "role": "neutral",
+        "displayName": "Lilac Line",
+        "canonical": "oklch(88.4% 0.055 296.7)",
+        "tonalRamp": [
+          "#0E051F",
+          "#281F3D",
+          "#453C5C",
+          "#645B7D",
+          "#857CA0",
+          "#A89EC4",
+          "#CCC2EA",
+          "#F0EBFE"
+        ]
+      },
+      "title-violet-top": {
+        "role": "primary",
+        "displayName": "Title Violet (top)",
+        "canonical": "oklch(77.5% 0.123 303.3)",
+        "tonalRamp": [
+          "#130025",
+          "#320954",
+          "#502C76",
+          "#704D99",
+          "#926EBE",
+          "#B591E4",
+          "#D6BAFF",
+          "#F2EAFE"
+        ]
+      },
+      "title-violet-low": {
+        "role": "primary",
+        "displayName": "Title Violet (low)",
+        "canonical": "oklch(54.7% 0.201 295.6)",
+        "tonalRamp": [
+          "#100028",
+          "#2E035F",
+          "#51089D",
+          "#6F3AC4",
+          "#8F60EB",
+          "#AE8EFB",
+          "#CDBEFD",
+          "#EFEBFE"
+        ]
+      },
+      "title-orchid-top": {
+        "role": "primary",
+        "displayName": "Title Orchid (top)",
+        "canonical": "oklch(79.0% 0.140 322.6)",
+        "tonalRamp": [
+          "#17011B",
+          "#3E0346",
+          "#631F6C",
+          "#85418F",
+          "#A963B3",
+          "#CE86D8",
+          "#F4A9FE",
+          "#FCE6FF"
+        ]
+      },
+      "title-orchid-low": {
+        "role": "primary",
+        "displayName": "Title Orchid (low)",
+        "canonical": "oklch(54.9% 0.210 308.5)",
+        "tonalRamp": [
+          "#140022",
+          "#370154",
+          "#5E048C",
+          "#832CB9",
+          "#A653E0",
+          "#C77FFE",
+          "#DCB7FD",
+          "#F4EAFE"
+        ]
+      },
+      "bubble-top": {
+        "role": "primary",
+        "displayName": "Candy Bubble Pink (top)",
+        "canonical": "oklch(80.1% 0.142 331.0)",
+        "tonalRamp": [
+          "#190017",
+          "#41033E",
+          "#691A64",
+          "#8D3D86",
+          "#B15FA9",
+          "#D782CE",
+          "#FEA6F4",
+          "#FFE5FB"
+        ]
+      },
+      "bubble-mid": {
+        "role": "primary",
+        "displayName": "Candy Bubble Pink",
+        "canonical": "oklch(69.3% 0.193 330.1)",
+        "tonalRamp": [
+          "#190018",
+          "#41033F",
+          "#6E086A",
+          "#992594",
+          "#BF4CB8",
+          "#E671DD",
+          "#FDA6F5",
+          "#FFE5FB"
+        ]
+      },
+      "bubble-low": {
+        "role": "primary",
+        "displayName": "Candy Bubble Pink (base)",
+        "canonical": "oklch(62.3% 0.205 329.0)",
+        "tonalRamp": [
+          "#190018",
+          "#410340",
+          "#6D086C",
+          "#9B1D98",
+          "#C148BD",
+          "#E86DE3",
+          "#FFA4F9",
+          "#FEE6FC"
+        ]
+      },
+      "lilac-top": {
+        "role": "secondary",
+        "displayName": "Lilac Bubble (top)",
+        "canonical": "oklch(74.4% 0.131 296.2)",
+        "tonalRamp": [
+          "#100127",
+          "#2E085B",
+          "#4A2D7E",
+          "#694EA2",
+          "#8A70C7",
+          "#AD93ED",
+          "#CEBDFE",
+          "#F0EBFF"
+        ]
+      },
+      "lilac-low": {
+        "role": "secondary",
+        "displayName": "Lilac Bubble",
+        "canonical": "oklch(58.7% 0.190 293.5)",
+        "tonalRamp": [
+          "#0F0128",
+          "#2C0560",
+          "#4D169A",
+          "#6A40C0",
+          "#8B64E7",
+          "#AB90FC",
+          "#CBBFFE",
+          "#EFECFF"
+        ]
+      },
+      "select-top": {
+        "role": "secondary",
+        "displayName": "Selection Lilac (top)",
+        "canonical": "oklch(70.4% 0.152 295.4)",
+        "tonalRamp": [
+          "#100029",
+          "#2F0161",
+          "#4B2788",
+          "#6A4AAC",
+          "#8B6CD2",
+          "#AD8FF9",
+          "#CDBEFE",
+          "#EFEBFF"
+        ]
+      },
+      "select-low": {
+        "role": "secondary",
+        "displayName": "Selection Lilac",
+        "canonical": "oklch(59.0% 0.187 292.7)",
+        "tonalRamp": [
+          "#0F002A",
+          "#2C0263",
+          "#4B1999",
+          "#6941BF",
+          "#8966E6",
+          "#A991FB",
+          "#CABFFD",
+          "#EFECFF"
+        ]
+      },
+      "bar-you-a": {
+        "role": "primary",
+        "displayName": "You Bar (start)",
+        "canonical": "oklch(82.4% 0.127 332.1)",
+        "tonalRamp": [
+          "#190017",
+          "#42023D",
+          "#66215F",
+          "#8A4281",
+          "#AE63A4",
+          "#D386C8",
+          "#FAAAEE",
+          "#FEE6FA"
+        ]
+      },
+      "bar-you-b": {
+        "role": "primary",
+        "displayName": "You Bar (end)",
+        "canonical": "oklch(69.9% 0.203 330.4)",
+        "tonalRamp": [
+          "#190018",
+          "#41033E",
+          "#6E086A",
+          "#9B1E95",
+          "#C248BA",
+          "#E96DE0",
+          "#FDA6F4",
+          "#FFE6FB"
+        ]
+      },
+      "bar-them-a": {
+        "role": "secondary",
+        "displayName": "Them Bar (start)",
+        "canonical": "oklch(77.4% 0.114 296.9)",
+        "tonalRamp": [
+          "#100028",
+          "#2D1054",
+          "#493176",
+          "#69519A",
+          "#8A73BE",
+          "#AC95E4",
+          "#CFBEFC",
+          "#F0EBFE"
+        ]
+      },
+      "bar-them-b": {
+        "role": "secondary",
+        "displayName": "Them Bar (end)",
+        "canonical": "oklch(65.2% 0.168 292.2)",
+        "tonalRamp": [
+          "#0E002A",
+          "#2C0263",
+          "#492291",
+          "#6747B6",
+          "#876ADD",
+          "#A891FB",
+          "#CABFFD",
+          "#EEECFF"
+        ]
+      },
+      "track": {
+        "role": "neutral",
+        "displayName": "Track",
+        "canonical": "oklch(93.7% 0.032 305.3)",
+        "tonalRamp": [
+          "#0E0716",
+          "#292132",
+          "#463E50",
+          "#655D70",
+          "#877E92",
+          "#AAA0B6",
+          "#CEC4DB",
+          "#F3EAFF"
+        ]
+      },
+      "spark": {
+        "role": "neutral",
+        "displayName": "Sparkle",
+        "canonical": "oklch(74.5% 0.121 295.9)",
+        "tonalRamp": [
+          "#100028",
+          "#2D0E57",
+          "#49307A",
+          "#68509D",
+          "#8972C2",
+          "#AC95E8",
+          "#CEBEFD",
+          "#F0EBFF"
+        ]
+      },
+      "spark-pink": {
+        "role": "neutral",
+        "displayName": "Sparkle Pink",
+        "canonical": "oklch(81.2% 0.114 335.7)",
+        "tonalRamp": [
+          "#1A0015",
+          "#43023A",
+          "#652559",
+          "#88457A",
+          "#AC669D",
+          "#D289C1",
+          "#F8ADE6",
+          "#FFE6F8"
+        ]
+      },
+      "danger": {
+        "role": "neutral",
+        "displayName": "Danger Raspberry",
+        "canonical": "oklch(53.3% 0.182 350.7)",
+        "tonalRamp": [
+          "#1C000E",
+          "#48012C",
+          "#78024C",
+          "#A6206E",
+          "#CE4990",
+          "#F66EB3",
+          "#FDADD2",
+          "#FFE7F1"
+        ]
+      },
+      "openai-mint": {
+        "role": "tertiary",
+        "displayName": "OpenAI Mint",
+        "canonical": "oklch(94.8% 0.031 178.9)",
+        "tonalRamp": [
+          "#000F0B",
+          "#132A25",
+          "#304842",
+          "#4F6761",
+          "#6F8983",
+          "#91ACA5",
+          "#B5D0C9",
+          "#DAF6EF"
+        ]
+      },
+      "openai-ink": {
+        "role": "tertiary",
+        "displayName": "OpenAI Ink",
+        "canonical": "oklch(43.2% 0.065 171.6)",
+        "tonalRamp": [
+          "#000F0A",
+          "#012D22",
+          "#124D3E",
+          "#366D5D",
+          "#588F7E",
+          "#7BB3A0",
+          "#9ED7C4",
+          "#C3FDE9"
+        ]
+      },
+      "gemini-sky": {
+        "role": "tertiary",
+        "displayName": "Gemini Sky",
+        "canonical": "oklch(92.4% 0.032 266.2)",
+        "tonalRamp": [
+          "#060A19",
+          "#1E2535",
+          "#3A4253",
+          "#596174",
+          "#798296",
+          "#9CA5BA",
+          "#BFC9DF",
+          "#E7EFFF"
+        ]
+      },
+      "gemini-ink": {
+        "role": "tertiary",
+        "displayName": "Gemini Ink",
+        "canonical": "oklch(42.0% 0.113 262.6)",
+        "tonalRamp": [
+          "#000728",
+          "#041E5B",
+          "#1F3E7D",
+          "#3D5FA1",
+          "#5D81C6",
+          "#7FA4EC",
+          "#AECAFD",
+          "#E6EFFF"
+        ]
+      },
+      "claude-peach": {
+        "role": "tertiary",
+        "displayName": "Claude Peach",
+        "canonical": "oklch(93.6% 0.029 28.1)",
+        "tonalRamp": [
+          "#160605",
+          "#32201D",
+          "#513C39",
+          "#715B58",
+          "#937C79",
+          "#B79F9B",
+          "#DCC2BF",
+          "#FEE9E6"
+        ]
+      },
+      "claude-ink": {
+        "role": "tertiary",
+        "displayName": "Claude Ink",
+        "canonical": "oklch(46.9% 0.111 33.0)",
+        "tonalRamp": [
+          "#1D0200",
+          "#490A01",
+          "#712516",
+          "#964636",
+          "#BB6856",
+          "#E28A77",
+          "#FEB4A3",
+          "#FFE9E4"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "title": {
+        "displayName": "Title",
+        "purpose": "The two-line glossy 'Who Texts / First' masthead and the share card title; gradient fill clipped to text with a white rim."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Route card titles and the drop-zone title, in heading violet."
+      },
+      "verdict": {
+        "displayName": "Verdict",
+        "purpose": "The AI's one-line verdict, in curly quotes, balanced wrap."
+      },
+      "pill": {
+        "displayName": "Pill",
+        "purpose": "The one screen heading per screen, inside the lilac pill."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Stat tile numbers, tabular figures."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Bubble labels, white with a plum text shadow; never below 18px."
+      },
+      "button-big": {
+        "displayName": "Button (big)",
+        "purpose": "Analyze and Share result bubbles."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Choices, fieldset legends, the receipts summary."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Sentences and lane leads."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Fine print, notes, sub-lines in Ink 3."
+      },
+      "link": {
+        "displayName": "Link",
+        "purpose": "Underlined text buttons and links in violet-deep."
+      },
+      "mono": {
+        "displayName": "Mono",
+        "purpose": "Only the prompt preview and the model id."
+      }
+    },
+    "shadows": [
+      {
+        "name": "panel-lift-pink",
+        "value": "0 1px 0 rgba(255,255,255,0.9) inset, 0 18px 30px -24px rgba(214,100,190,0.6)",
+        "purpose": "Pink route card."
+      },
+      {
+        "name": "panel-lift-lilac",
+        "value": "0 1px 0 rgba(255,255,255,0.9) inset, 0 18px 30px -24px rgba(120,90,210,0.55)",
+        "purpose": "Lilac route card."
+      },
+      {
+        "name": "soft-lift",
+        "value": "0 10px 22px -20px rgba(120,80,200,0.6)",
+        "purpose": "Reply lanes; similar values under the verdict card and file chip."
+      },
+      {
+        "name": "pill-gloss",
+        "value": "0 1px 0 #fff inset, 0 6px 16px -12px rgba(120,80,200,0.55)",
+        "purpose": "Screen heading pill."
+      },
+      {
+        "name": "bubble",
+        "value": "0 0 0 2px rgba(255,255,255,0.35) inset, 0 -4px 8px rgba(150,30,140,0.22) inset, 0 12px 22px -10px rgba(200,70,190,0.7), 0 2px 4px rgba(170,60,170,0.2)",
+        "purpose": "Candy buttons, with the white gloss band inside."
+      },
+      {
+        "name": "bubble-pressed",
+        "value": "0 0 0 2px rgba(255,255,255,0.35) inset, 0 -2px 6px rgba(150,30,140,0.25) inset, 0 6px 12px -8px rgba(200,70,190,0.7)",
+        "purpose": "Candy buttons while pressed."
+      },
+      {
+        "name": "sticker",
+        "value": "drop-shadow(0 8px 10px rgba(150,90,200,0.28))",
+        "purpose": "Chrome heart stickers (a filter, not box-shadow)."
+      },
+      {
+        "name": "phone",
+        "value": "0 1px 0 rgba(255,255,255,0.9) inset, 0 40px 80px -36px rgba(110,70,190,0.45), 0 12px 30px -18px rgba(110,70,190,0.3)",
+        "purpose": "The phone frame at 560px and wider."
+      },
+      {
+        "name": "sheet",
+        "value": "0 30px 70px -20px rgba(80,40,150,0.55)",
+        "purpose": "Share dialog; backdrop rgba(70,40,120,0.42) with a 4px blur."
+      },
+      {
+        "name": "focus-halo",
+        "value": "0 0 0 4px rgba(150,110,235,0.18)",
+        "purpose": "Key field focus, with the border deepened to #A98BEF."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Every entry and state transition."
+      },
+      {
+        "name": "screen-enter",
+        "value": "0.42s: opacity 0 to 1, translateY 14px to 0, blur 3px to 0",
+        "purpose": "Screen change; the file chip and sheet use the same keyframes at 0.35s."
+      },
+      {
+        "name": "race",
+        "value": "scaleX 0 to 1 over --dur (about 1.2s), cubic-bezier(0.3, 0.7, 0.4, 1)",
+        "purpose": "Reply bars on reveal."
+      },
+      {
+        "name": "bob",
+        "value": "translate 0 to -5px, 6s ease-in-out infinite alternate (5s on the verdict heart), staggered delays",
+        "purpose": "Chrome heart stickers."
+      },
+      {
+        "name": "typing-dots",
+        "value": "1.1s ease-in-out infinite, 0.15s stagger, 5px rise",
+        "purpose": "Verdict loading."
+      },
+      {
+        "name": "caret",
+        "value": "0.8s steps(1) blink",
+        "purpose": "Verdict typing."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "all animations and transitions to 0.01ms; stickers stop",
+        "purpose": "prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow",
+        "value": "max-width: 359px",
+        "purpose": "12px gutter, 38px title, masthead sparkles and pill sparkles hidden, 38px tile numerals."
+      },
+      {
+        "name": "phone-frame",
+        "value": "min-width: 560px",
+        "purpose": "The column floats as a phone on the lavender field with drifting hearts."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Bubble Button",
+      "kind": "button",
+      "refersTo": "button-bubble",
+      "description": "Primary candy button: pink gradient pill with a gloss band, white Fredoka label. Copy prompt, Analyze, Share result, Download PNG.",
+      "html": "<button class=\"ds-bubble\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" aria-hidden=\"true\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"8.5\" y=\"8.5\" width=\"12\" height=\"12\" rx=\"3\"/><path d=\"M15.5 5.5v-.8a2.2 2.2 0 0 0-2.2-2.2H5.7a2.2 2.2 0 0 0-2.2 2.2v7.6c0 1.2 1 2.2 2.2 2.2h.8\"/></g></svg><span>Copy prompt</span></button>",
+      "css": ".ds-bubble { position: relative; isolation: isolate; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 28px; border: 0; border-radius: 999px; background: linear-gradient(180deg, var(--bubble-top, #F29BE8) 0%, var(--bubble-mid, #DC68D4) 52%, var(--bubble-low, #C64DC2) 100%); color: #fff; font: 600 20px/1 \"Fredoka\", \"Nunito\", ui-rounded, system-ui, sans-serif; letter-spacing: 0.01em; text-shadow: 0 1px 1px rgba(130,30,120,0.4); box-shadow: 0 0 0 2px rgba(255,255,255,0.35) inset, 0 -4px 8px rgba(150,30,140,0.22) inset, 0 12px 22px -10px rgba(200,70,190,0.7), 0 2px 4px rgba(170,60,170,0.2); cursor: pointer; transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.2s; } .ds-bubble::before { content: ''; position: absolute; left: 18px; right: 18px; top: 3px; height: 52%; border-radius: 999px; background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.12) 70%, rgba(255,255,255,0) 100%); pointer-events: none; z-index: -1; } .ds-bubble:hover { transform: translateY(-1px); filter: saturate(1.08); } .ds-bubble:active { transform: translateY(1px) scale(0.98); box-shadow: 0 0 0 2px rgba(255,255,255,0.35) inset, 0 -2px 6px rgba(150,30,140,0.25) inset, 0 6px 12px -8px rgba(200,70,190,0.7); } .ds-bubble:focus-visible { outline: 3px solid #8657D6; outline-offset: 4px; }"
+    },
+    {
+      "name": "Lilac Bubble",
+      "kind": "button",
+      "refersTo": "button-bubble-lilac",
+      "description": "Secondary bubble: same shape in the lilac gradient. Share in the sheet; the done state of Copy.",
+      "html": "<button class=\"ds-bubble-lilac\"><span>Share</span></button>",
+      "css": ".ds-bubble-lilac { position: relative; isolation: isolate; display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; border: 0; border-radius: 999px; background: linear-gradient(180deg, var(--lilac-top, #B49AF5), #9C7CEA 52%, var(--lilac-low, #855EE0)); color: #fff; font: 600 20px/1 \"Fredoka\", \"Nunito\", ui-rounded, system-ui, sans-serif; letter-spacing: 0.01em; text-shadow: 0 1px 1px rgba(70,30,140,0.4); box-shadow: 0 0 0 2px rgba(255,255,255,0.35) inset, 0 -4px 8px rgba(150,30,140,0.22) inset, 0 12px 22px -10px rgba(200,70,190,0.7), 0 2px 4px rgba(170,60,170,0.2); cursor: pointer; transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.2s; } .ds-bubble-lilac::before { content: ''; position: absolute; left: 18px; right: 18px; top: 3px; height: 52%; border-radius: 999px; background: linear-gradient(180deg, rgba(255,255,255,0.5), rgba(255,255,255,0)); z-index: -1; } .ds-bubble-lilac:hover { transform: translateY(-1px); filter: saturate(1.08); } .ds-bubble-lilac:active { transform: translateY(1px) scale(0.98); } .ds-bubble-lilac:focus-visible { outline: 3px solid #8657D6; outline-offset: 4px; }"
+    },
+    {
+      "name": "Mini Buttons",
+      "kind": "button",
+      "refersTo": "button-mini",
+      "description": "Small error-state actions: a selection-lilac pill and a white ghost pill.",
+      "html": "<div class=\"ds-mini-row\"><button class=\"ds-mini\">Try again</button><button class=\"ds-mini ds-mini-ghost\">Change key</button></div>",
+      "css": ".ds-mini-row { display: flex; gap: 8px; } .ds-mini { min-height: 40px; padding: 0 16px; border: 0; border-radius: 999px; background: linear-gradient(180deg, #A88AF3, #8460E0); color: #fff; font: 600 15px/1 \"Fredoka\", \"Nunito\", ui-rounded, system-ui, sans-serif; box-shadow: 0 8px 14px -10px rgba(110,70,210,0.9); cursor: pointer; transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1); } .ds-mini:hover { transform: translateY(-1px); } .ds-mini:active { transform: scale(0.97); } .ds-mini:focus-visible { outline: 3px solid #8657D6; outline-offset: 3px; } .ds-mini-ghost { background: #fff; color: var(--violet-deep, #7650C9); border: 1.5px solid var(--lilac-line, #DCD2FA); box-shadow: none; }"
+    },
+    {
+      "name": "Provider Chips",
+      "kind": "chip",
+      "refersTo": "chip-provider-openai",
+      "description": "Plain-name provider radio group in mint, sky and peach; the selected chip gets a ring of its own hue, lifts 1px and shows a check.",
+      "html": "<div class=\"ds-provs\" role=\"radiogroup\" aria-label=\"Which AI\"><button class=\"ds-prov ds-openai\" role=\"radio\" aria-checked=\"true\"><svg class=\"ds-tick\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m4.5 12.5 4.8 4.8L19.5 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>OpenAI</button><button class=\"ds-prov ds-gemini\" role=\"radio\" aria-checked=\"false\"><svg class=\"ds-tick\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m4.5 12.5 4.8 4.8L19.5 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Gemini</button><button class=\"ds-prov ds-claude\" role=\"radio\" aria-checked=\"false\"><svg class=\"ds-tick\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m4.5 12.5 4.8 4.8L19.5 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Claude</button></div>",
+      "css": ".ds-provs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; } .ds-prov { position: relative; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 6px 0 14px; border-radius: 16px; border: 1.5px solid; font: 600 16px/1 \"Fredoka\", \"Nunito\", ui-rounded, system-ui, sans-serif; cursor: pointer; transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1); } .ds-openai { --ring: #4FB497; background: #D9F5EE; border-color: #B3E6D8; color: #245C4C; } .ds-gemini { --ring: #6B8FDB; background: #DCE6FC; border-color: #BCCDF3; color: #2A4A8A; } .ds-claude { --ring: #E08F79; background: #FDE3DF; border-color: #F4C7BD; color: #8E3F2F; } .ds-tick { position: absolute; left: 9px; top: 50%; width: 15px; height: 15px; margin-top: -7.5px; opacity: 0; transform: scale(0.4); transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s; } .ds-prov[aria-checked='true'] { border-color: var(--ring); box-shadow: 0 0 0 1.5px var(--ring) inset, 0 10px 18px -12px var(--ring); transform: translateY(-1px); } .ds-prov[aria-checked='true'] .ds-tick { opacity: 1; transform: none; } .ds-prov:hover { transform: translateY(-1px); } .ds-prov:active { transform: scale(0.97); } .ds-prov:focus-visible { outline: 3px solid #8657D6; outline-offset: 3px; }"
+    },
+    {
+      "name": "Choice",
+      "kind": "chip",
+      "refersTo": "choice",
+      "description": "Radio choice box (time range, which one is you); selected fills with the selection-lilac gradient.",
+      "html": "<div class=\"ds-choices\"><label class=\"ds-choice\"><input type=\"radio\" name=\"ds-range\" checked><span>Last 3 months</span></label><label class=\"ds-choice\"><input type=\"radio\" name=\"ds-range\"><span>All time</span></label></div>",
+      "css": ".ds-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; } .ds-choice { position: relative; display: block; } .ds-choice input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; } .ds-choice span { display: flex; align-items: center; justify-content: center; min-height: 52px; padding: 6px 16px; border-radius: 18px; border: 1.5px solid var(--lilac-line, #DCD2FA); background: rgba(255,255,255,0.7); color: var(--ink-2, #5C4A80); font: 600 17px/1.15 \"Fredoka\", \"Nunito\", ui-rounded, system-ui, sans-serif; transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1); } .ds-choice:hover span { background: #fff; } .ds-choice input:checked + span { background: linear-gradient(180deg, #A88AF3 0%, #9572EA 50%, #8460E0 100%); border-color: transparent; color: #fff; text-shadow: 0 1px 1px rgba(70,30,140,0.35); box-shadow: 0 1px 0 rgba(255,255,255,0.45) inset, 0 10px 18px -12px rgba(110,70,210,0.9); } .ds-choice input:focus-visible + span { outline: 3px solid #8657D6; outline-offset: 3px; } .ds-choice input:active + span { transform: scale(0.98); }"
+    },
+    {
+      "name": "Key Field",
+      "kind": "input",
+      "refersTo": "input-key",
+      "description": "Masked API key row: key icon, input, eye toggle; focus deepens the border and adds a lilac halo.",
+      "html": "<label class=\"ds-keyfield\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" aria-hidden=\"true\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"7.5\" cy=\"15.5\" r=\"4\"/><path d=\"m10.4 12.6 9.1-9.1M16 7l2.5 2.5M13.8 9.2l2 2\"/></g></svg><input type=\"password\" placeholder=\"sk-…\" aria-label=\"API key\"></label>",
+      "css": ".ds-keyfield { display: flex; align-items: center; gap: 8px; min-height: 52px; padding: 0 6px 0 14px; background: rgba(255,255,255,0.86); border: 1.5px solid var(--lilac-line, #DCD2FA); border-radius: 16px; color: #9C80EA; transition: border-color 0.2s, box-shadow 0.2s; } .ds-keyfield:hover { border-color: #C9B8F6; } .ds-keyfield:focus-within { border-color: #A98BEF; box-shadow: 0 0 0 4px rgba(150,110,235,0.18); } .ds-keyfield input { flex: 1; min-width: 0; height: 48px; border: 0; outline: 0; background: transparent; color: var(--ink, #3F2F60); font: 600 16px/1 \"Nunito\", ui-rounded, system-ui, -apple-system, \"Segoe UI\", sans-serif; letter-spacing: 0.04em; caret-color: #8657D6; } .ds-keyfield input::placeholder { color: #8E7FB0; font-weight: 500; }"
+    },
+    {
+      "name": "Screen Pill",
+      "kind": "nav",
+      "refersTo": "pill-heading",
+      "description": "The one heading per screen, a lilac pill flanked by two sparkles; it takes focus when the screen changes.",
+      "html": "<h2 class=\"ds-pill\" tabindex=\"-1\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 1.5c.5 5.6 3.4 9.4 10.5 10.5-7.1 1.1-10 4.9-10.5 10.5C11.5 16.9 8.6 13.1 1.5 12 8.6 10.9 11.5 7.1 12 1.5Z\" fill=\"currentColor\"/></svg><span>Pick how to run it</span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 1.5c.5 5.6 3.4 9.4 10.5 10.5-7.1 1.1-10 4.9-10.5 10.5C11.5 16.9 8.6 13.1 1.5 12 8.6 10.9 11.5 7.1 12 1.5Z\" fill=\"currentColor\"/></svg></h2>",
+      "css": ".ds-pill { display: flex; align-items: center; justify-content: center; gap: 8px; width: fit-content; margin: 0 auto; padding: 11px 16px; border-radius: 999px; background: var(--pill, #EAE2FC); color: #6A40C4; font: 700 21px/1.1 \"Fredoka\", \"Nunito\", ui-rounded, system-ui, sans-serif; white-space: nowrap; box-shadow: 0 1px 0 #fff inset, 0 6px 16px -12px rgba(120,80,200,0.55); } .ds-pill svg { width: 16px; height: 16px; color: #9C80EA; } .ds-pill:focus { outline: none; } .ds-pill:focus-visible { outline: 3px solid #8657D6; outline-offset: 3px; }"
+    },
+    {
+      "name": "Route Card",
+      "kind": "card",
+      "refersTo": "card-route-pink",
+      "description": "Pink panel for route 1 with the gradient heart number badge and a Fredoka headline; route 2 is the lilac twin.",
+      "html": "<article class=\"ds-route\"><div class=\"ds-route-head\"><span class=\"ds-num\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><defs><linearGradient id=\"ds-gp\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0\" stop-color=\"#F6A9EC\"/><stop offset=\"1\" stop-color=\"#D45ACD\"/></linearGradient></defs><path d=\"M12 21.2C6.3 17 2.5 13.4 2.5 8.9 2.5 6 4.7 3.8 7.4 3.8c1.9 0 3.5 1 4.6 2.6 1.1-1.6 2.7-2.6 4.6-2.6 2.7 0 4.9 2.2 4.9 5.1 0 4.5-3.8 8.1-9.5 12.3Z\" fill=\"url(#ds-gp)\"/></svg><b>1</b></span><h3>Copy the prompt</h3></div><p>Export the chat, open ChatGPT, Gemini or Claude, attach the export and paste the prompt.</p></article>",
+      "css": ".ds-route { border-radius: 24px; padding: 16px 16px 18px; background: linear-gradient(180deg, #FDE8F7 0%, var(--pink-panel, #FCE4F5) 50%, var(--pink-panel-2, #FAD9F0) 100%); border: 1.5px solid var(--pink-line, #F5C6E8); box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 18px 30px -24px rgba(214,100,190,0.6); color: var(--ink-3, #6B5A8E); font: 400 14.5px/1.45 \"Nunito\", ui-rounded, system-ui, -apple-system, \"Segoe UI\", sans-serif; } .ds-route p { margin: 0; } .ds-route-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; } .ds-route-head h3 { margin: 0; color: #7043CB; font: 700 27px/1.05 \"Fredoka\", \"Nunito\", ui-rounded, system-ui, sans-serif; } .ds-num { position: relative; width: 50px; height: 48px; flex: none; display: grid; place-items: center; } .ds-num svg { position: absolute; inset: 0; width: 100%; height: 100%; filter: drop-shadow(0 3px 4px rgba(190,80,180,0.3)); } .ds-num b { position: relative; color: #fff; font: 700 21px/1 \"Fredoka\", \"Nunito\", ui-rounded, system-ui, sans-serif; margin-top: -2px; }"
+    },
+    {
+      "name": "Reply Lane",
+      "kind": "custom",
+      "refersTo": "lane",
+      "description": "One side of the reply race: gradient avatar, 'You reply in' with the time, and a glossy bar on the track.",
+      "html": "<div class=\"ds-lane\"><span class=\"ds-avatar\"></span><div><p>You reply in <b>3 min</b></p><div class=\"ds-track\"><span class=\"ds-fill\"></span></div></div></div>",
+      "css": ".ds-lane { display: grid; grid-template-columns: 48px 1fr; gap: 14px; align-items: center; padding: 14px 16px; border-radius: 22px; background: rgba(255,255,255,0.72); border: 1.5px solid #F1E2F8; box-shadow: 0 10px 22px -20px rgba(120,80,200,0.6); } .ds-avatar { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(180deg, #F9C0EF, #EA7EDC); box-shadow: 0 0 0 3px #FCE3F7; } .ds-lane p { margin: 0; color: var(--ink-2, #5C4A80); font: 500 17px/1.2 \"Nunito\", ui-rounded, system-ui, -apple-system, \"Segoe UI\", sans-serif; } .ds-lane b { color: var(--ink, #3F2F60); font: 700 20px/1 \"Fredoka\", \"Nunito\", ui-rounded, system-ui, sans-serif; font-variant-numeric: tabular-nums; } .ds-track { height: 13px; margin-top: 9px; border-radius: 99px; background: var(--track, #EFE5FC); overflow: hidden; box-shadow: 0 1px 2px rgba(120,80,200,0.12) inset; } .ds-fill { display: block; height: 100%; width: 82%; border-radius: inherit; background: linear-gradient(90deg, var(--bar-you-a, #F6A6EA), var(--bar-you-b, #E166D8)); box-shadow: 0 1px 0 rgba(255,255,255,0.55) inset; transform-origin: left center; animation: ds-race 1.2s cubic-bezier(0.3, 0.7, 0.4, 1) both; } @keyframes ds-race { from { transform: scaleX(0); } to { transform: scaleX(1); } } @media (prefers-reduced-motion: reduce) { .ds-fill { animation: none; } }"
+    },
+    {
+      "name": "Verdict Card",
+      "kind": "card",
+      "refersTo": "verdict-card",
+      "description": "The AI's one-liner in Fredoka heading violet with the provider credit under the quote; the chrome face heart sits on the left in the build (a raster, omitted here).",
+      "html": "<div class=\"ds-verdict\"><span class=\"ds-verdict-heart\" aria-hidden=\"true\"></span><div><p class=\"ds-verdict-text\">“You’re carrying this chat.”</p><p class=\"ds-verdict-by\">Claude’s verdict</p></div></div>",
+      "css": ".ds-verdict { display: grid; grid-template-columns: 92px 1fr; gap: 12px; align-items: center; padding: 16px 16px 18px 10px; min-height: 140px; border-radius: 24px; background: radial-gradient(120px 90px at 18% 50%, rgba(255,255,255,0.9), transparent 70%), linear-gradient(135deg, #FDEDF9 0%, #FBE2F4 55%, #F1E6FD 100%); border: 1.5px solid var(--pink-line, #F5C6E8); box-shadow: 0 16px 28px -24px rgba(214,100,190,0.7); } .ds-verdict-heart { width: 72px; height: 66px; margin: auto; background: radial-gradient(circle at 35% 30%, #fff 0 12%, #D9D3F2 30%, #A99BD8 100%); clip-path: path('M36 64C17 50 4 38 4 23 4 13 11 6 20 6c6 0 12 3 16 9 4-6 10-9 16-9 9 0 16 7 16 17 0 15-13 27-32 41Z'); } .ds-verdict-text { margin: 0; color: #7043CB; font: 700 26px/1.12 \"Fredoka\", \"Nunito\", ui-rounded, system-ui, sans-serif; text-wrap: balance; } .ds-verdict-by { margin: 8px 0 0; color: var(--ink-3, #6B5A8E); font: 700 14px/1.3 \"Nunito\", ui-rounded, system-ui, -apple-system, \"Segoe UI\", sans-serif; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Love Letter That Does Maths",
+    "overview": "**Creative North Star: \"The Love Letter That Does Maths\"**\n\nThe page is one phone screen from a pastel sticker book. A lavender field holds a blush-white screen. Blush-pink and lilac panels sit on it, with glossy liquid-chrome heart stickers tucked at their corners and four-point sparkles in the gaps. The lettering is chunky rounded Fredoka. The title has a glossy violet-to-orchid fill with a white rim. Buttons are candy bubbles with a gloss band across the top. The drop zone is a dashed love-letter outline.\n\nThe tone is cute, but the content is exact. Reply times, \"you start N% of chats\" and dry-reply counts are worked out on the phone and set as big Fredoka numerals with tabular figures. The AI writes only the one-line verdict, and its card is credited under the quote (\"Claude's verdict\"). The rejected anti-reference is the category default: a dark \"AI analyser\" dashboard.\n\nThe same world is drawn twice. The live page is built in CSS, and the share card is a 1080x1920 canvas (`js/card.js`) that repeats the palette, the glossy title, the lanes, the tiles and the verdict card at story size.",
+    "keyCharacteristics": [
+      "Lavender field, blush-white screen, pink and lilac panels.",
+      "Pink is You and the main action; lilac is Them and selection.",
+      "Fredoka for anything read at a glance, Nunito for sentences, JetBrains Mono only for text you paste into an AI.",
+      "Raster chrome heart stickers and SVG four-point sparkles are the ornament.",
+      "Gloss everywhere: white inset top lines, candy gradients, shadows tinted violet.",
+      "Everything rounded; nothing sharp."
+    ],
+    "rules": [
+      {
+        "name": "The Two Inks Rule",
+        "body": "Pink is You, route 1 and the main action. Lilac is Them, route 2 and selection. Every paired element follows the split: route cards, number hearts, avatars, reply bars and stat tiles.",
+        "section": "colors"
+      },
+      {
+        "name": "The Plain-Names Rule",
+        "body": "AI providers appear as plain names in tinted chips (mint, sky, peach), never as logos. Those three tints are not used anywhere else.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Palette Rule",
+        "body": "The share card in `js/card.js` repeats the `:root` hex values as literals on a canvas. Change a colour in both places, or the card and the page drift apart.",
+        "section": "colors"
+      },
+      {
+        "name": "The Glance-Or-Read Rule",
+        "body": "Anything a student reads at a glance (titles, buttons, numbers, choices, headings) is Fredoka. Anything read as a sentence is Nunito. Mono appears only for text meant to be pasted into a machine.",
+        "section": "typography"
+      },
+      {
+        "name": "The Exact Numbers Rule",
+        "body": "Every number the stats produce is set in tabular figures, so the counts look measured, not decorative.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tinted Shadow Rule",
+        "body": "Every shadow takes the colour of the world (plum, violet, orchid). Grey and black shadows are out, and so are hard offset shadows.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Gloss Line Rule",
+        "body": "Raised panels, pills and the phone carry a 1px white inset line along the top edge. It is what makes a pastel panel read as glossy plastic rather than paper.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Nothing Sharp Rule",
+        "body": "No corner is under 10px, and nothing is square.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do keep the Two Inks split: pink for You, route 1 and the main action; lilac for Them, route 2 and selection.",
+      "Do tint every shadow plum, violet or orchid, and give raised panels the 1px white inset gloss line.",
+      "Do set titles, buttons, numbers, choices and headings in Fredoka, sentences in Nunito, and only paste-able machine text in JetBrains Mono.",
+      "Do set every computed number in tabular figures.",
+      "Do credit the AI under the verdict quote (\"Claude's verdict\") in Nunito 700 Ink 3.",
+      "Do change `js/card.js` whenever a `:root` colour changes; the share card repeats the palette as literals.",
+      "Do give every generated raster a `.json` provenance sidecar (model, reference, prompt, date) and keep its source in `.impeccable/assets-src/`.",
+      "Do let `prefers-reduced-motion` stop the stickers, the bar race and the typing dots."
+    ],
+    "donts": [
+      "Don't show provider logos; providers are plain names in their mint, sky and peach chips.",
+      "Don't put a badge or label above the verdict quote; the credit goes under it.",
+      "Don't use grey, black or hard offset shadows.",
+      "Don't draw hearts or sparkles with emoji or icon fonts; use the chrome stickers, the inline SVG heart and the four-point SVG sparkle.",
+      "Don't set white bubble labels below 18px; white on candy pink holds up only at that size with the plum text shadow.",
+      "Don't use square or near-square corners (under 10px).",
+      "Don't turn a screen into a dark \"AI analyser\" dashboard."
+    ]
+  }
+}
