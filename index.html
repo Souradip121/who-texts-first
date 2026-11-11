@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Who Texts First</title>
+<meta name="description" content="Who's putting in the effort in your WhatsApp chat? Copy a prompt into ChatGPT, Gemini or Claude, or use your own API key. No server: your chat goes only to the AI you pick.">
+<meta name="theme-color" content="#FBEFFC">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.openai.com https://generativelanguage.googleapis.com https://api.anthropic.com; img-src 'self' data: blob:; style-src 'self'; font-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta property="og:title" content="Who Texts First">
+<meta property="og:description" content="Who's putting in the effort in your WhatsApp chat? Ask an AI.">
+<meta property="og:image" content="assets/og.png">
+<link rel="icon" href="assets/hearts/heart-pink.webp" type="image/webp">
+<link rel="preload" href="assets/fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="js/app.js"></script>
+</head>
+<body>
+<!--
+THESIS: A Y2K love letter that does maths. The category ships a dark "AI analyser" dashboard; this is a pastel sticker-book phone screen where the numbers are exact and the AI only writes the one-liner.
+OWN-WORLD: Lavender field, blush-pink and lilac panels, glossy liquid-chrome heart stickers, chunky rounded Fredoka lettering with a glossy violet fill, candy bubble buttons with a top gloss, four-point sparkles, dashed love-letter drop zone.
+STORY: Pick a route (copy the prompt, or bring a key), add the chat, watch two reply bars race, read the verdict, send the card.
+FIRST VIEWPORT: Title with two chrome hearts, "Pick how to run it" pill, pink "Copy the prompt" card with its Copy bubble above the fold; the lilac key card starts below.
+FORM: Brief-pinned concept B "Y2K love letter" (author's pick of four), no roll.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 1.5c.5 5.6 3.4 9.4 10.5 10.5-7.1 1.1-10 4.9-10.5 10.5C11.5 16.9 8.6 13.1 1.5 12 8.6 10.9 11.5 7.1 12 1.5Z" fill="currentColor"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21.2C6.3 17 2.5 13.4 2.5 8.9 2.5 6 4.7 3.8 7.4 3.8c1.9 0 3.5 1 4.6 2.6 1.1-1.6 2.7-2.6 4.6-2.6 2.7 0 4.9 2.2 4.9 5.1 0 4.5-3.8 8.1-9.5 12.3Z" fill="currentColor"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8.5" y="8.5" width="12" height="12" rx="3"/><path d="M15.5 5.5v-.8a2.2 2.2 0 0 0-2.2-2.2H5.7a2.2 2.2 0 0 0-2.2 2.2v7.6c0 1.2 1 2.2 2.2 2.2h.8"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m4.5 12.5 4.8 4.8L19.5 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4"/><path d="m10.4 12.6 9.1-9.1M16 7l2.5 2.5M13.8 9.2l2 2"/></g></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="3"/><path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7"/></g></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></g></symbol>
+  <symbol id="i-eye-off" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 5.7A9.8 9.8 0 0 1 12 5.5c6 0 9.5 6.5 9.5 6.5a17 17 0 0 1-2.6 3.4M6.4 6.9C3.9 8.6 2.5 12 2.5 12S6 18.5 12 18.5a9.5 9.5 0 0 0 4.6-1.2M9.9 9.9a3 3 0 0 0 4.2 4.2M3 3l18 18"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 36h-2.5A9 9 0 0 1 11 18.1 12.5 12.5 0 0 1 35 15.6 10 10 0 0 1 36 36h-3"/><path d="M24 40V23M17.5 29.5 24 23l6.5 6.5"/></g></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M6.5 2.5h7.2L19.5 8.3v11.2a2 2 0 0 1-2 2h-11a2 2 0 0 1-2-2v-15a2 2 0 0 1 2-2Z" fill="currentColor"/><path d="M13.5 2.7v4.1c0 .9.7 1.6 1.6 1.6h4.1" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.4"/><path d="M8 13h8M8 16.5h5.5" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="12" cy="8.2" r="4.2"/><path d="M3.8 20.2c.6-4 4-6.6 8.2-6.6s7.6 2.6 8.2 6.6c.1.6-.4 1.1-1 1.1H4.8c-.6 0-1.1-.5-1-1.1Z"/></g></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="9" cy="8.5" r="3.8"/><path d="M1.8 19.6c.6-3.6 3.6-5.9 7.2-5.9s6.6 2.3 7.2 5.9c.1.6-.4 1.1-1 1.1H2.8c-.6 0-1.1-.5-1-1.1Z"/><circle cx="16.6" cy="7.6" r="3.1" opacity=".75"/><path d="M17.4 12.9c2.6.3 4.5 2.3 4.9 5 .1.6-.4 1.1-1 1.1h-3.2a8 8 0 0 0-2.7-5.6c.6-.4 1.3-.5 2-.5Z" opacity=".75"/></g></symbol>
+  <symbol id="i-bubble" viewBox="0 0 24 24"><path d="M12 3.5c5 0 9 3.4 9 7.8s-4 7.8-9 7.8c-1.1 0-2.2-.2-3.2-.5L4 20.5l1.3-4.2A7.4 7.4 0 0 1 3 11.3C3 6.9 7 3.5 12 3.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 9.5H7a2.5 2.5 0 0 0-2.5 2.5v6.5A2.5 2.5 0 0 0 7 21h10a2.5 2.5 0 0 0 2.5-2.5V12A2.5 2.5 0 0 0 17 9.5h-1.5"/><path d="M12 14.5V3M8 6.8 12 3l4 3.8"/></g></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11M7.5 10.5 12 15l4.5-4.5M4.5 17.5v1A2.5 2.5 0 0 0 7 21h10a2.5 2.5 0 0 0 2.5-2.5v-1"/></g></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4.5 12h14M13 6.5l5.5 5.5-5.5 5.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M14.5 5.5 8 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5"/><circle cx="12" cy="16.3" r=".6" fill="currentColor"/></g></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M9 5.5H6.5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V15M13.5 4.5h6v6M19.5 4.5l-8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <linearGradient id="g-pink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6A9EC"/><stop offset="1" stop-color="#D45ACD"/></linearGradient>
+  <linearGradient id="g-lilac" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C7B2F8"/><stop offset="1" stop-color="#8F6CE6"/></linearGradient>
+</svg>
+
+<div class="field" aria-hidden="true">
+  <img class="drift d1" src="assets/hearts/heart-lilac.webp" alt="" width="240" height="222">
+  <img class="drift d2" src="assets/hearts/heart-pink.webp" alt="" width="320" height="298">
+  <img class="drift d3" src="assets/hearts/heart-silver.webp" alt="" width="320" height="298">
+  <svg class="spark f1"><use href="#i-sparkle"/></svg>
+  <svg class="spark f2"><use href="#i-sparkle"/></svg>
+  <svg class="spark f3"><use href="#i-sparkle"/></svg>
+</div>
+
+<main class="app" id="app">
+  <header class="masthead">
+    <button class="back" id="back" type="button" hidden aria-label="Back">
+      <svg aria-hidden="true"><use href="#i-back"/></svg>
+    </button>
+    <img class="sticker st-left" src="assets/hearts/heart-silver.webp" alt="" width="320" height="298">
+    <img class="sticker st-right" src="assets/hearts/heart-pink.webp" alt="" width="320" height="298">
+    <svg class="spark s1" aria-hidden="true"><use href="#i-sparkle"/></svg>
+    <svg class="spark s2" aria-hidden="true"><use href="#i-sparkle"/></svg>
+    <svg class="spark s3" aria-hidden="true"><use href="#i-sparkle"/></svg>
+    <svg class="spark s4" aria-hidden="true"><use href="#i-sparkle"/></svg>
+    <h1 class="title"><span class="t1">Who Texts</span> <span class="t2">First</span></h1>
+  </header>
+
+  <!-- 1 · Pick how to run it -->
+  <section class="screen" id="screen-start" data-screen="start" aria-labelledby="h-start">
+    <h2 class="pill" id="h-start" tabindex="-1">
+      <svg aria-hidden="true"><use href="#i-sparkle"/></svg>
+      <span>Pick how to run it</span>
+      <svg aria-hidden="true"><use href="#i-sparkle"/></svg>
+    </h2>
+
+    <article class="route route-a" aria-labelledby="h-prompt">
+      <div class="route-head">
+        <span class="num num-pink" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21.2C6.3 17 2.5 13.4 2.5 8.9 2.5 6 4.7 3.8 7.4 3.8c1.9 0 3.5 1 4.6 2.6 1.1-1.6 2.7-2.6 4.6-2.6 2.7 0 4.9 2.2 4.9 5.1 0 4.5-3.8 8.1-9.5 12.3Z" fill="url(#g-pink)"/><path d="M6.4 6.1c-1 .3-1.6 1-1.7 1.9" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.2" stroke-linecap="round"/></svg><b>1</b></span>
+        <h3 id="h-prompt">Copy the prompt</h3>
+        <svg class="spark rs" aria-hidden="true"><use href="#i-sparkle"/></svg>
+      </div>
+
+      <div class="prompt" id="prompt" data-open="false">
+        <pre class="prompt-text" id="prompt-text" tabindex="0" aria-label="The prompt"></pre>
+        <button class="prompt-toggle" id="prompt-toggle" type="button" aria-expanded="false" aria-controls="prompt-text">Show the whole prompt</button>
+      </div>
+      <img class="sticker st-prompt" src="assets/hearts/heart-silver.webp" alt="" width="320" height="298">
+
+      <button class="bubble" id="copy" type="button">
+        <svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg>
+        <span class="label">Copy prompt</span>
+      </button>
+      <p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+
+      <ol class="steps">
+        <li><b>Export the chat</b>, without media. <button class="inline-link" id="howto-toggle" type="button" aria-expanded="false" aria-controls="howto">How?</button>
+          <div class="howto" id="howto" hidden>
+            <p><b>Android:</b> open the chat, tap the three dots, then More, Export chat, Without media.</p>
+            <p><b>iPhone:</b> open the chat, tap their name, then Export Chat, Without Media.</p>
+          </div>
+        </li>
+        <li><b>Open</b> <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a>, <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini</a> or <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude</a>.</li>
+        <li><b>Attach the export</b>, paste the prompt.</li>
+      </ol>
+    </article>
+
+    <article class="route route-b" aria-labelledby="h-key">
+      <div class="route-head">
+        <span class="num num-lilac" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21.2C6.3 17 2.5 13.4 2.5 8.9 2.5 6 4.7 3.8 7.4 3.8c1.9 0 3.5 1 4.6 2.6 1.1-1.6 2.7-2.6 4.6-2.6 2.7 0 4.9 2.2 4.9 5.1 0 4.5-3.8 8.1-9.5 12.3Z" fill="url(#g-lilac)"/><path d="M6.4 6.1c-1 .3-1.6 1-1.7 1.9" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.2" stroke-linecap="round"/></svg><b>2</b></span>
+        <h3 id="h-key">Use your own API&nbsp;key</h3>
+        <svg class="spark rs" aria-hidden="true"><use href="#i-sparkle"/></svg>
+      </div>
+
+      <div class="providers" role="radiogroup" aria-label="Which AI">
+        <button class="prov prov-openai" type="button" role="radio" aria-checked="true" data-provider="openai">
+          <svg class="tick" aria-hidden="true"><use href="#i-check"/></svg>OpenAI</button>
+        <button class="prov prov-gemini" type="button" role="radio" aria-checked="false" data-provider="gemini" tabindex="-1">
+          <svg class="tick" aria-hidden="true"><use href="#i-check"/></svg>Gemini</button>
+        <button class="prov prov-claude" type="button" role="radio" aria-checked="false" data-provider="claude" tabindex="-1">
+          <svg class="tick" aria-hidden="true"><use href="#i-check"/></svg>Claude</button>
+      </div>
+
+      <div class="keyfield">
+        <svg class="ic" aria-hidden="true"><use href="#i-key"/></svg>
+        <input id="key" type="password" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false"
+               placeholder="sk-…" aria-label="OpenAI API key" aria-describedby="key-note key-error">
+        <button class="eye" id="eye" type="button" aria-label="Show key" aria-pressed="false">
+          <svg aria-hidden="true"><use href="#i-eye"/></svg>
+        </button>
+      </div>
+      <p class="field-error" id="key-error" role="alert" hidden></p>
+
+      <p class="fine" id="key-note">
+        <svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>
+        <span>Your key stays in your browser. Your chat goes only to the AI you pick, never to us.</span>
+      </p>
+
+      <div class="key-tools">
+        <a class="inline-link" id="get-key" href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer">Get an OpenAI key<svg aria-hidden="true"><use href="#i-out"/></svg></a>
+        <button class="inline-link" id="model-toggle" type="button" aria-expanded="false" aria-controls="model-box">Model: <code id="model-name">gpt-6-luna</code></button>
+        <button class="inline-link" id="forget" type="button" hidden>Forget key</button>
+      </div>
+      <div class="model-box" id="model-box" hidden>
+        <label for="model">Model id</label>
+        <input id="model" type="text" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <p>The cheapest current model is picked for you. Change it only if the provider retires it.</p>
+      </div>
+
+      <img class="sticker st-card2" src="assets/hearts/heart-pink.webp" alt="" width="320" height="298">
+      <button class="bubble bubble-wide" id="to-chat" type="button">
+        <span class="label">Add your chat</span>
+        <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg>
+      </button>
+    </article>
+  </section>
+
+  <!-- 2 · Add your chat -->
+  <section class="screen" id="screen-chat" data-screen="chat" aria-labelledby="h-chat" hidden>
+    <h2 class="pill" id="h-chat" tabindex="-1">
+      <svg aria-hidden="true"><use href="#i-sparkle"/></svg>
+      <span>Add your chat</span>
+      <svg aria-hidden="true"><use href="#i-sparkle"/></svg>
+    </h2>
+
+    <div class="drop" id="drop">
+      <input class="sr-only" id="file" type="file" accept=".txt,.zip,text/plain,application/zip,application/x-zip-compressed">
+      <label class="drop-target" for="file">
+        <svg class="cloud" aria-hidden="true"><use href="#i-cloud"/></svg>
+        <span class="drop-title">Drop your chat export here</span>
+        <span class="drop-sub">or tap to select a file (.txt or .zip)</span>
+      </label>
+      <div class="filechip" id="filechip" hidden>
+        <svg class="ic" aria-hidden="true"><use href="#i-file"/></svg>
+        <span class="filename" id="filename"></span>
+        <button class="chip-x" id="file-remove" type="button" aria-label="Remove this file">
+          <svg aria-hidden="true"><use href="#i-x"/></svg>
+        </button>
+      </div>
+      <p class="parse-note" id="parse-note" role="status" aria-live="polite"></p>
+    </div>
+    <p class="sample-row"><button class="inline-link" id="sample" type="button">No chat handy? Try a made-up sample</button></p>
+
+    <fieldset class="group" id="who" hidden>
+      <legend><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg>Which one is you?</legend>
+      <div class="choices" id="who-me"></div>
+    </fieldset>
+    <fieldset class="group" id="who-them-box" hidden>
+      <legend><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg>Compare with</legend>
+      <div class="choices" id="who-them"></div>
+    </fieldset>
+
+    <fieldset class="group">
+      <legend><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Time range</legend>
+      <div class="choices two">
+        <label class="choice"><input type="radio" name="range" value="3m" checked><span>Last 3 months</span></label>
+        <label class="choice"><input type="radio" name="range" value="all"><span>All time</span></label>
+      </div>
+    </fieldset>
+
+    <button class="bubble bubble-big" id="analyze" type="button" aria-describedby="analyze-note">
+      <svg class="spk" aria-hidden="true"><use href="#i-sparkle"/></svg>
+      <span class="label">Analyze</span>
+      <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg>
+      <svg class="spk" aria-hidden="true"><use href="#i-sparkle"/></svg>
+    </button>
+    <p class="fine center" id="analyze-note">The numbers are worked out on your phone. Only they and your last 300 messages go to <span class="prov-name">OpenAI</span>, with names swapped for “You” and “Them”.</p>
+  </section>
+
+  <!-- 3 · Results -->
+  <section class="screen" id="screen-result" data-screen="result" aria-labelledby="h-result" hidden>
+    <h2 class="pill" id="h-result" tabindex="-1">
+      <svg aria-hidden="true"><use href="#i-sparkle"/></svg>
+      <span>Who’s putting in the effort?</span>
+      <svg aria-hidden="true"><use href="#i-sparkle"/></svg>
+    </h2>
+
+    <div class="race" id="race">
+      <div class="lane lane-you">
+        <span class="avatar avatar-you" aria-hidden="true"><svg><use href="#i-user"/></svg></span>
+        <div class="lane-body">
+          <p><span>You reply in</span> <b id="r-you">–</b></p>
+          <div class="track" role="img" id="bar-you-label" aria-label=""><span class="fill" id="bar-you"></span></div>
+        </div>
+      </div>
+      <div class="lane lane-them">
+        <span class="avatar avatar-them" aria-hidden="true"><svg><use href="#i-users"/></svg></span>
+        <div class="lane-body">
+          <p><span>They reply in</span> <b id="r-them">–</b></p>
+          <div class="track" role="img" id="bar-them-label" aria-label=""><span class="fill" id="bar-them"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tiles">
+      <div class="tile tile-pink">
+        <svg class="tile-ic heart" aria-hidden="true"><use href="#i-heart"/></svg>
+        <svg class="spark t1s" aria-hidden="true"><use href="#i-sparkle"/></svg>
+        <svg class="spark t2s" aria-hidden="true"><use href="#i-sparkle"/></svg>
+        <p class="tile-top">You start</p>
+        <p class="tile-big"><span id="start-pct">–</span></p>
+        <p class="tile-low">of chats</p>
+      </div>
+      <div class="tile tile-lilac">
+        <svg class="tile-ic" aria-hidden="true"><use href="#i-bubble"/></svg>
+        <svg class="spark t1s" aria-hidden="true"><use href="#i-sparkle"/></svg>
+        <svg class="spark t2s" aria-hidden="true"><use href="#i-sparkle"/></svg>
+        <p class="tile-top q">“hmm”</p>
+        <p class="tile-big"><span class="times">×</span> <span id="dry-n">–</span></p>
+        <p class="tile-low" id="dry-who">dry replies from them</p>
+      </div>
+    </div>
+
+    <div class="verdict" id="verdict" data-state="idle">
+      <img class="verdict-heart" src="assets/hearts/heart-face.webp" alt="" width="400" height="372">
+      <div class="verdict-body">
+        <div class="typing" aria-hidden="true"><i></i><i></i><i></i></div>
+        <p class="verdict-text" id="verdict-text" aria-live="polite"></p>
+        <p class="verdict-by" id="verdict-by"></p>
+        <div class="verdict-error" id="verdict-error" hidden>
+          <p class="err-msg" id="err-msg" role="alert"></p>
+          <div class="err-actions">
+            <button class="mini" id="retry" type="button">Try again</button>
+            <button class="mini mini-ghost" id="change-key" type="button">Change key</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="bubble bubble-big" id="share" type="button">
+      <svg class="spk" aria-hidden="true"><use href="#i-sparkle"/></svg>
+      <svg class="ic" aria-hidden="true"><use href="#i-share"/></svg>
+      <span class="label">Share result</span>
+      <svg class="spk" aria-hidden="true"><use href="#i-sparkle"/></svg>
+    </button>
+
+    <details class="receipts">
+      <summary>All the numbers <svg class="plus" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+      <table>
+        <thead><tr><th scope="col"><span class="sr-only">Metric</span></th><th scope="col">You</th><th scope="col">Them</th></tr></thead>
+        <tbody id="receipts"></tbody>
+      </table>
+      <p class="receipts-note">Replies over 12 h don’t count. A chat “starts” after 6+ h of silence. A double text is your own follow-up 20+ min later with no reply. After midnight means 12–5 am.</p>
+    </details>
+
+    <p class="range-note" id="range-note"></p>
+    <p class="again-row"><button class="inline-link" id="again" type="button">Check another chat</button></p>
+  </section>
+
+  <footer class="foot">
+    <p>Made by <a href="https://www.instagram.com/souradip.sh/" target="_blank" rel="noopener noreferrer">@souradip.sh</a> · <a href="https://github.com/Souradip121/who-texts-first" target="_blank" rel="noopener noreferrer">open source</a> · no server, no tracking</p>
+  </footer>
+  <svg class="wave" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 70C60 30 120 40 170 62s110 40 160 14 60-30 70-28v72H0Z" fill="#F3E3FB"/>
+    <path d="M0 92c50-24 110-26 160-8s120 30 170 8 60-20 70-18v46H0Z" fill="#F8D9F1" opacity=".8"/>
+  </svg>
+  <img class="sticker st-foot-l" src="assets/hearts/heart-silver.webp" alt="" width="320" height="298">
+  <img class="sticker st-foot-r" src="assets/hearts/heart-pink.webp" alt="" width="320" height="298">
+</main>
+
+<dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
+  <div class="sheet-inner">
+    <h2 id="sheet-title">Your result card</h2>
+    <div class="sheet-frame" id="sheet-frame"></div>
+    <p class="sheet-hint" id="sheet-hint">Made on your phone, nothing uploaded. In Instagram’s browser, press and hold the picture to save it.</p>
+    <div class="sheet-actions">
+      <a class="bubble" id="download" download="who-texts-first.png" href="#">
+        <svg class="ic" aria-hidden="true"><use href="#i-download"/></svg><span class="label">Download PNG</span>
+      </a>
+      <button class="bubble bubble-lilac" id="native-share" type="button" hidden>
+        <svg class="ic" aria-hidden="true"><use href="#i-share"/></svg><span class="label">Share</span>
+      </button>
+    </div>
+    <button class="sheet-close" id="sheet-close" type="button" aria-label="Close">
+      <svg aria-hidden="true"><use href="#i-x"/></svg>
+    </button>
+  </div>
+</dialog>
+</body>
+</html>
